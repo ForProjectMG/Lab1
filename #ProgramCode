@@ -1,0 +1,56 @@
+#include<iostream>
+#include<cstring>
+#include<fstream>
+using namespace std;
+int main()
+{
+int v = 0, i, p, n, l, k, j;
+int Passarray1[6] = { 4,6,5,3,1,2 };
+int Passarray2[3] = { 1,2,3 };
+char matrix[6][3];
+char text[19];
+    setlocale(LC_ALL, "Russian");
+
+    cout <<"Введите свой текст:";
+    cin.getline(text, 19);
+
+ofstream fout("keys.txt");
+for (i = 0; i < 3; i++) {
+        fout << Passarray2[i] <<" ";
+    }
+    fout.close();
+
+if ((strlen(text)) < 19) {
+        i = strlen(text);
+for (i; i < 19; i++)
+            text[i] = ' ';
+    }
+
+for (i = 0; i < 3; i++) {
+        p = Passarray2[i] - 1;
+for (k = 0; k < 6; k++) {
+            matrix[k][p] = text[v];
+            v++;
+        }
+    }
+
+
+for (i = 0; i < 6; i++) {
+cout<<endl;
+for (k = 0; k < 3; k++) {
+            cout << matrix[i][k] <<" ";
+        }
+    }
+    cout << endl;
+
+ofstream fout2("scripttext.txt");
+for (i = 0; i < 6; i++) {
+        n = Passarray1[i] - 1;
+for (k = 0; k < 3; k++) {
+            cout << matrix[n][k];
+            fout2 << matrix[n][k];
+        }
+    }
+    fout2.close();
+return 0;
+}
