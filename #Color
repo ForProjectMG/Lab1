@@ -1,0 +1,14 @@
+<html>
+ <head>
+	<title>Меняем фон сайта с помощью CSS - Нубекс</title>
+   <style>
+	body {
+   	   background: #fa8e47;
+	   color: #fff;
+   }
+   </style>
+ </head>
+ <body>
+	<p>Это пример текста белого цвета, заданного с помощью background CSS. Фон страницы также задан с помощью CSS.</p>
+ </body>
+</html>
