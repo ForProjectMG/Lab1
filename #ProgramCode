@@ -54,4 +54,4 @@ for (k = 0; k < 3; k++) {
     fout2.close();
 return 0;
 }
-!!!!Master!!!!
+!!!!Vse rabotaet ispravno!!!!
